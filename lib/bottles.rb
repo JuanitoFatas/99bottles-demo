@@ -10,6 +10,9 @@ class Bottles
     from.downto(to).map { |number| verse(number) }.join
   end
 
+  def song
+  end
+
   def zero_verse
     "No more bottles of beer on the wall, no more bottles of beer.\n" \
     "Go to the store and buy some more, 99 bottles of beer on the wall.\n"

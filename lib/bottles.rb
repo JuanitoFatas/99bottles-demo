@@ -5,6 +5,10 @@ class Bottles
   end
 
   def bottles_text(number)
-    "#{number} bottles"
+    if number > 1
+      "#{number} bottles"
+    else
+      "#{number} bottle"
+    end
   end
 end

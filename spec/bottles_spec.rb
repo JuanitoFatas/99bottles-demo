@@ -43,5 +43,16 @@ Take it down and pass it around, no more bottles of beer on the wall.
         expect(expected).to eq(Bottles.new.verse(1))
       end
     end
+
+    context "0" do
+      it "returns correct verse" do
+        expected = <<-VERSE
+No more bottles of beer on the wall, no more bottles of beer.
+Go to the store and buy some more, 99 bottles of beer on the wall.
+        VERSE
+
+        expect(expected).to eq(Bottles.new.verse(0))
+      end
+    end
   end
 end

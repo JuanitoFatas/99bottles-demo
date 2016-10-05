@@ -5,6 +5,8 @@ class Bottles
   end
 
   def bottles_text(number)
+    return "no more bottles" if number.zero?
+
     if number > 1
       "#{number} bottles"
     else

@@ -1,7 +1,14 @@
 class Bottles
   def verse(number)
+    return zero_verse if number.zero?
+
     "#{bottles_text(number)} of beer on the wall, #{bottles_text(number)} of beer.\n" \
     "#{second_leading_text(number)} and pass it around, #{bottles_text(number - 1)} of beer on the wall.\n"
+  end
+
+  def zero_verse
+    "No more bottles of beer on the wall, no more bottles of beer.\n" \
+    "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
   end
 
   def bottles_text(number)

@@ -69,5 +69,20 @@ Take one down and pass it around, 97 bottles of beer on the wall.
         expect(expected).to eq(Bottles.new.verses(99, 98))
       end
     end
+
+    context "2 to 0" do
+      it "returns correct verses" do
+        expected = <<-VERSES
+2 bottles of beer on the wall, 2 bottles of beer.
+Take one down and pass it around, 1 bottle of beer on the wall.
+1 bottle of beer on the wall, 1 bottle of beer.
+Take it down and pass it around, no more bottles of beer on the wall.
+No more bottles of beer on the wall, no more bottles of beer.
+Go to the store and buy some more, 99 bottles of beer on the wall.
+        VERSES
+
+        expect(expected).to eq(Bottles.new.verses(2, 0))
+      end
+    end
   end
 end

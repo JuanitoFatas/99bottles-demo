@@ -11,6 +11,7 @@ class Bottles
   end
 
   def song
+    verses(99, 0)
   end
 
   def zero_verse

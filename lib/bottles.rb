@@ -7,6 +7,7 @@ class Bottles
   end
 
   def verses(from, to)
+    verse(from) + verse(to)
   end
 
   def zero_verse
